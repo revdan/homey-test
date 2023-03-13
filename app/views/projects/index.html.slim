@@ -1,3 +1,5 @@
-- @projects.each do |project|
-  = project.name
+ul
+  li
+    - @projects.each do |project|
+      = link_to project.name, project_path(project.id)
   
