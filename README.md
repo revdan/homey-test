@@ -68,3 +68,7 @@ Based on the above "conversation", I propose the following steps:
 - Display the list of updates in reverse chronological order, distinguishing via the UI whether it's a comment or status update. Show the text, author, and created_at
 - Show a form on the same page to add a new update. It can be a single text input, and a dropdown to select whether it's a status update or comment. 
 
+## Unforeseen questions
+I didn't think of these before starting, but adding them in as a record of my decisions
+### Should users be able to udpate/delete history items (that they created, or otherwise)?
+Given the scenario, it would be changing history to allow these behaviours, so the only action available to users should be Create
