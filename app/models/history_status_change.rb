@@ -1,0 +1,2 @@
+class HistoryStatusChange < HistoryItem
+end
