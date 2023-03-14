@@ -1,6 +1,7 @@
 class HistoryItemsController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
+    @history_items = @project.history_items.ordered
   end
 
   def create
