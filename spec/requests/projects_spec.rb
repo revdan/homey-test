@@ -1,9 +1,9 @@
 require "rails_helper"
 
 RSpec.describe "Projects", type: :request do
-  describe "GET /index" do
-    let(:user) { create(:user) }
+  let(:user) { create(:user) }
 
+  describe "GET /index" do
     it "requires user to be authenticated" do
       sign_in user
       get root_path

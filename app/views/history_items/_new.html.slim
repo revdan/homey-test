@@ -1,0 +1,9 @@
+- new_item = HistoryItem.new(project_id: @project.id)
+= turbo_frame_tag new_item do
+  = form_for [@project, new_item] do |f|
+    = f.label      :type
+    = f.select(:type, {"Comment" => "HistoryComment", "Status Change" => "HistoryStatusChange"})
+    = f.label      :body
+    = f.text_field :body
+    = f.submit
+
