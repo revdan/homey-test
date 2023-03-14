@@ -59,6 +59,7 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "standard"
   gem "rspec-rails"
+  gem "pry"
 end
 
 group :development do
