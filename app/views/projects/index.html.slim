@@ -1,5 +1,5 @@
 ul
   li
     - @projects.each do |project|
-      = link_to project.name, project_path(project.id)
+      = link_to project.name, project_history_items_path(project.id)
   
