@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :history_items
-  resources :projects
+  resources :projects do
+    resources :history_items
+  end
   devise_for :users
 
   root "projects#index"
