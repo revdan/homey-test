@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title
+      | HomeyTest
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+    = turbo_include_tags
+  body.container.mx-auto.mt-2
+    header.mx-auto.px-5
+      h1.text-3xl.font-bold
+        | homey tech test
+    nav.mx-auto.px-5
+      ul
+        li.font-bold.underline
+          = link_to("projects", projects_path)
+    main.mx-auto.mt-5.px-5
+      p.notice
+        = notice
+      p.alert
+        = alert
+      = yield
