@@ -79,3 +79,4 @@ This is the stuff I didn't get to, but would have done next if I'd had time
 - UI in general is pretty bad, it was a mistake to try out tailwind for the first time when there was a time limit 😅
 - I didn't get a chance to show the old status->new status change. 
 - The form doesn't clear on submit. I tried adding this via Stimulus but as it didn't work instantly I gave up as it wasn't a showstopper
+- There's a frustrating bug; because of the hotwire addition, adding the first comment still shows the message saying "no comments or updates found".
