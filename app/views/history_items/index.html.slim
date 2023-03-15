@@ -3,6 +3,10 @@ h2
   = turbo_frame_tag @new_item
     = render "history_items/new", locals: { project: @project } 
   = turbo_frame_tag "history_items" do
-    = render collection: @project.history_items.ordered, partial: "history_items/history_item"
+    - if @history_items.empty?
+      h3
+        | No comments or updates found
+    - else
+      = render collection: @history_items, partial: "history_items/history_item"
 
 

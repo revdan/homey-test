@@ -72,3 +72,11 @@ Based on the above "conversation", I propose the following steps:
 I didn't think of these before starting, but adding them in as a record of my decisions
 ### Should users be able to udpate/delete history items (that they created, or otherwise)?
 Given the scenario, it would be changing history to allow these behaviours, so the only action available to users should be Create
+
+## Unfinished bits
+This is the stuff I didn't get to, but would have done next if I'd had time
+- The login form has no styling
+- UI in general is pretty bad, it was a mistake to try out tailwind for the first time when there was a time limit 😅
+- I didn't get a chance to show the old status->new status change. 
+- The form doesn't clear on submit. I tried adding this via Stimulus but as it didn't work instantly I gave up as it wasn't a showstopper
+- There's a frustrating bug; because of the hotwire addition, adding the first comment still shows the message saying "no comments or updates found".

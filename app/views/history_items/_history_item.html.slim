@@ -1,4 +1,11 @@
 = turbo_frame_tag history_item do
-  h3
-    = history_item.type
-    = history_item.to_json
+  ul.max-w-lg.divide-y.divide-gray-200.dark:divide-gray-700.pt-5
+    li.pb-3.sm:pb-4
+      .flex.items-center.space-x-4
+        .flex-1.min-w-0
+          p.text-sm.font-medium.text-gray-900.truncate.dark:text-white
+            = history_item.body
+          p.text-sm.text-gray-500.truncate.dark:text-gray-400.italic
+            | Posted #{time_ago_in_words(history_item.created_at)} ago by #{history_item.user.name}
+        .inline-flex.items-center.text-base.font-semibold.text-gray-900.dark:text-white.text-xs.font-semibold.inline-block.py-1.px-2.uppercase.rounded-full.text-emerald-600.bg-emerald-200.uppercase.last:mr-0.mr-1
+           = history_item.type_badge

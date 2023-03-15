@@ -1,6 +1,7 @@
 class HistoryItemsController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
+    @history_items = @project.history_items.ordered.map(&:decorate)
   end
 
   def create
@@ -9,11 +10,11 @@ class HistoryItemsController < ApplicationController
     if @item.save
       respond_to do |format|
         format.html do
-          redirect_to project_history_items_path(project.id), notice: "History Item was successfully created."
+          redirect_to project_history_items_path(params[:project_id]), notice: "History Item was successfully created."
         end
         format.turbo_stream do
           render turbo_stream: turbo_stream.prepend(:history_items, partial: "history_items/history_item",
-            locals: {history_item: @item})
+            locals: {history_item: @item.decorate})
         end
       end
     end
