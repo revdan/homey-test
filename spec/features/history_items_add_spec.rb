@@ -17,14 +17,14 @@ feature "HistoryItems", js: true do
     fill_in :history_item_body, with: "test comment"
     click_on "Create History item"
 
-    expect(page).to have_content("HistoryComment")
+    expect(page).to have_content("NEW COMMENT")
     expect(page).to have_content("test comment")
 
     select("Status Change", from: :history_item_type)
     fill_in :history_item_body, with: "test status change"
     click_on "Create History item"
 
-    expect(page).to have_content("HistoryStatusChange")
+    expect(page).to have_content("NEW STATUS")
     expect(page).to have_content("test status change")
   end
 end
